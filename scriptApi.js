@@ -41,8 +41,18 @@ fetch("http://www.omdbapi.com/?t="+searchInput.value+"&apikey=6aa91fd2")
             actors[i].textContent = one[i];
             movie.textContent = data.Title + " -";
             date.textContent = data.Released;
-            mainImg.textContent = data.Poster
         }
     }) 
 })
+
+// wikipedia api
+
+fetch("https://en.wikipedia.org/w/api.php?action=opensearch&search=batman-1989&format=json" + "&origin=*")
+.then(function(response){
+    console.log(response); 
+    return response.json();
+})
+    .then (function(data){
+    console.log(data);
+    })
 
