@@ -1,10 +1,10 @@
 let display = document.querySelector("#display");
 let movie = document.querySelector("#movie");
-let date = document.querySelector("#date");
 let actors = document.querySelectorAll("#actors");
 let mainImg = document.querySelector("#hero");
 let searchInput = document.querySelector("#searchInput");
 let searchBtn = document.querySelector("#searchBtn");
+
 
 let btn = document.querySelector("#btn");
 
@@ -12,10 +12,6 @@ display.style.visibility = "hidden";
 
 searchBtn.addEventListener("click", function(event){
     event.preventDefault();
-
-btn.addEventListener("click", function(){
-alert("hello");
-})
 
 fetch("http://www.omdbapi.com/?t="+searchInput.value+"&apikey=6aa91fd2")
 .then(function(response){
@@ -43,7 +39,6 @@ fetch("http://www.omdbapi.com/?t="+searchInput.value+"&apikey=6aa91fd2")
             date.textContent = data.Released;
         }
     }) 
-})
 
 // wikipedia api
 
@@ -56,3 +51,14 @@ fetch("https://en.wikipedia.org/w/api.php?action=opensearch&search=batman-1989&f
     console.log(data);
     })
 
+    btn.addEventListener("click", function(){
+        console.log(movie.innerHTML); // is a string
+
+
+
+
+        })
+
+
+
+})
