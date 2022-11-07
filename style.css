@@ -11,7 +11,7 @@
 }
 
 form{
-    width: 200px;
+    width: 300px;
     margin: 0px 0px 0px 20px;  
 }
 
@@ -45,11 +45,9 @@ form{
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
-.card:hover{
+#btn:hover{
     box-shadow: 5px 5px 5px 0px;
     cursor: pointer;
 }
-
