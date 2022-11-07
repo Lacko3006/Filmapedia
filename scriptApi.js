@@ -35,9 +35,21 @@ fetch("http://www.omdbapi.com/?t="+searchInput.value+"&apikey=6aa91fd2")
 
         for(let i=0; i<one.length; i++){
             actors[i].textContent = one[i];
-            movie.textContent = data.Title +"-"+data.Year;
+            movie.textContent = data.Title + " -";
+            date.textContent = data.Released;
         }
     }) 
+
+// wikipedia api
+
+fetch("https://en.wikipedia.org/w/api.php?action=opensearch&search=batman-1989&format=json" + "&origin=*")
+.then(function(response){
+    console.log(response); 
+    return response.json();
+})
+    .then (function(data){
+    console.log(data);
+    })
 
     btn.addEventListener("click", function(){
         console.log(movie.innerHTML); // is a string
