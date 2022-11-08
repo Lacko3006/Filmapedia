@@ -14,7 +14,9 @@ searchBtn.addEventListener("click", function (event) {
   fetch("http://www.omdbapi.com/?t=" + searchInput.value + "&apikey=6aa91fd2")
     .then(function (response) {
       console.log(response);
-      if (response.status == 404) {
+      console.log(response);
+
+      if (response.status === 404) {
         alert("search not found");
       } else if (searchInput.value === "") {
         alert("input field cant be empty");
@@ -32,26 +34,27 @@ searchBtn.addEventListener("click", function (event) {
 
       for (let i = 0; i < one.length; i++) {
         actors[i].textContent = one[i];
-        movie.textContent = data.Title + " -";
-        date.textContent = data.Released;
+        movie.textContent = data.Title + " " + data.Year;
+        // date.textContent = data.Released;
       }
     });
 
-    //wikipedia 
+  //wikipedia
   btn.addEventListener("click", function () {
     fetch(
-        "https://en.wikipedia.org/w/api.php?action=opensearch&search=" +movie.innerHTML +"film&format=json" +
-          "&origin=*"
-      )
-        .then(function (response) {
-          console.log(response);
-          return response.json();
-        })
-        .then(function (data) {
-          console.log(data);
-        let filmArray = data
-        console.log(filmArray)
-        });
-    console.log(movie.innerHTML); // is a string
+      "https://en.wikipedia.org/w/api.php?action=opensearch&search=" +
+        movie.innerHTML +
+        "&format=json" +
+        "&origin=*"
+    )
+      .then(function (response) {
+        console.log(response);
+        return response.json();
+      })
+      .then(function (data) {
+        console.log(data);
+        let filmArray = data[3][0];
+        console.log(filmArray);
+      });
   });
 });
