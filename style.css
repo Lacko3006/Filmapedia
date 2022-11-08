@@ -2,16 +2,17 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 *{
     margin: 0px;
-
     
 }
-
 body {
-    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(4, 32, 47);
 }
+
 
 #display{
     padding: 20px;
+    flex: end;
 }
 
 form{
@@ -30,7 +31,7 @@ form{
 #searchBtn{
     width: 100%;
     border-style: none;
-    background: brown;
+    background: rgb(26, 56, 78);
 }
 
 #searchBtn:hover{
@@ -42,7 +43,8 @@ form{
 }
 
 .card{
-    border: 1px solid black;
+    color: rgb(4, 32, 47);
+    border: 1px solid rgb(173, 50, 50);
     height: 80px;
     width: 300px;
     margin: 20px 0 20px 0px;
@@ -55,3 +57,21 @@ form{
     box-shadow: 5px 5px 5px 0px;
     cursor: pointer;
 }
+
+.center{
+        display: flex; 
+        justify-content: space-around;
+        align-content: space-around;
+        position: relative;
+        bottom: 210px;
+        
+        
+        
+}
+
+.card-image{
+    height: 250px;
+    width: 250px;
+}
+
+        
