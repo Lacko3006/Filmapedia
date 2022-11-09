@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Filmapedia</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel=“stylesheet” href=“style.css”>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-</head>
-<body>
-    <nav class="navbar has-background-black has-background-black" role="navigation" aria-label="main navigation">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="“stylesheet”" href="“style.css”" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+  </head>
+
+  <body>
+
+    <!-- navbar -->
+    <nav class="navbar has-background-black" role="navigation" aria-label="main navigation">
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
           <a class="navbar-item"> Home </a>
@@ -33,75 +39,96 @@
           <div class="navbar-item">
             <div class="buttons">
               <a class="button is-upper-roman">
-                <strong>Sign up</strong>
+                <strong>Saved Movies</strong>
               </a>
-              <a class="button is-light"> Log in </a>
             </div>
           </div>
         </div>
       </div>
     </nav>
-
-    <div id="display">
-      <div class="card" id="btn">
-        <span id="movie"></span>
-
-        <span id="date"></span>
-      </div>
-      <div class="card">
-        <span id="actors"></span>
-      </div>
-      <div class="card">
-        <span id="actors"></span>
-      </div>
-      <div class="card">
-        <span id="actors"></span>
-      </div>
+    <div class="title-container">
+      <h1 class="title is-1">Filmapedia</h1>
     </div>
-    <div class="center">
-        <div>
-        <h1 class="title is-underlined has-text-centered is-inline-block has-spaced-navbar-fixed-bottom">Filmapedia</h1>
-        <div class="card-image">
-        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-        </div>
-    <form>
-        <input type="text" id="searchInput" placeholder="Enter a movie name">
-        <button id="searchBtn">Click here</button>
-        </div>
-    </form>
+    <!-- end of Navbar -->
 
-    <div class="present">
+    <!-- content section -->
+    <div class="content">
+    <!-- right section -->
+      <div id="display">
         <div class="card" id="btn">
-          <span id="plot"></span>
-  
+          <span id="movie"></span>
+
           <span id="date"></span>
         </div>
         <div class="card">
-          <span id="genre"></span>
+          <span id="actors"></span>
         </div>
         <div class="card">
-          <span id="imdb"></span>
+          <span id="actors"></span>
         </div>
         <div class="card">
-          <span id="box-office"></span>
+          <span id="actors"></span>
         </div>
       </div>
-    
 
-
-</div>
-    
-    <footer class="footer has-background-black">
-        <div class="content has-text-centered">
-          <p class="has has-background-black-ter"> Project creators: Sam, Zayd, Tomal, Shuib and Charlie. 
-          </p>
-          <p> 
-            <a href="https://github.com/Lacko3006/marvel-character-search"> Github </a>
-            </p>
+      <!-- middle section -->
+      <div>
+        <div class="card-image">
+          <img
+            src="https://bulma.io/images/placeholders/1280x960.png"
+            alt="Placeholder image"
+          />
         </div>
-      </footer>
-    
-    <script src="scriptApi.js"></script>
-</body>
+        <form>
+          <div class="control">
+            <input
+              class="input is-danger"
+              type="text"
+              placeholder="Enter a movie name"
+              id="searchInput"
+            />
+          </div>
+          <br />
+          <button class="button is-ghost btn" id="searchBtn">Click here</button>
+        </form>
+      </div>
 
+      <!-- left section -->
+      <div class="present">
+        <div>
+          <div class="card" id="btn">
+            <span id="plot"></span>
+
+            <span id="date"></span>
+          </div>
+          <div class="card">
+            <span id="genre"></span>
+          </div>
+          <div class="card">
+            <span id="imdb"></span>
+          </div>
+          <div class="card">
+            <span id="box-office"></span>
+          </div>
+        </div>
+      </div>
+      <!-- end of content -->
+    </div>
+
+    <!-- footer -->
+    <footer class="footer has-background-black">
+      <div class="content has-text-centered">
+        <p class="has has-background-black-ter"> Project creators: Sam, Zayd, Tomal, Shuib and Charlie.
+          
+        </p>
+        <p>
+          <a href="https://github.com/Lacko3006/marvel-character-search">
+            Github
+          </a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="scriptApi.js"></script>
+  </body>
 </html>
