@@ -1,75 +1,69 @@
-
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
-*{
-    margin: 0px;
-    
+* {
+  margin: 0px;
 }
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #000000; 
-    background-image: url("");
+  font-family: "Roboto", sans-serif;
+  background-color: #000000;
+  background-image: url("");
 }
 
-
-#display{
-    padding: 30px;
-    flex: end;
-    
+#display {
+  padding: 30px;
+  flex: end;
 }
-
 
 #searchBtn {
-    text-align: center;
-    color: red;
-    width: 100%;
+  text-align: center;
+  color: red;
+  width: 100%;
 }
 
-
-#searchBtn:hover{
-    color: red;
-    box-shadow: 5px 5px 5px 0px red;
-    cursor: pointer;
-    opacity: 0.8;
-   
+#searchBtn:hover {
+  color: red;
+  box-shadow: 5px 5px 5px 0px red;
+  cursor: pointer;
+  opacity: 0.8;
 }
 
-.card{
-    color: rgb(4, 32, 47);
-    border: 1px solid rgb(173, 50, 50);
-    height: 110px;
-    width: 300px;
-    margin: 20px 0 20px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.card {
+  color: rgb(4, 32, 47);
+  border: 1px solid rgb(173, 50, 50);
+  height: 110px;
+  width: 300px;
+  margin: 20px 0 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#btn:hover{
-    box-shadow: 5px 5px 5px 0px;
-    cursor: pointer;
+#btn {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
 }
 
-
-.card-image{
-    height: 450px;
-    width: auto;
+#btn:hover {
+  box-shadow: 5px 5px 5px 0px;
+  cursor: pointer;
 }
 
-        
+.card-image {
+  height: 450px;
+  width: auto;
+}
 
 .content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .present {
-    padding: 30px;
+  padding: 30px;
 }
 
-.title-container{
-    text-align: center;
-    font-size: 35px;
+.title-container {
+  text-align: center;
+  font-size: 35px;
 }
-
-

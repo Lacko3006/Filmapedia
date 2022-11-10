@@ -5,11 +5,11 @@ let mainImg = document.querySelector("#hero");
 let searchInput = document.querySelector("#searchInput");
 let searchBtn = document.querySelector("#searchBtn");
 let btn = document.querySelector("#btn");
-let cardImgElement = document.querySelector(".card-image")
-let plotElement = document.querySelector("#plot")
-let genreElement = document.querySelector("#genre")
-let imdbRatingElement = document.querySelector("#imdb")
-let boxOfficeElement = document.querySelector("#box-office")
+let cardImgElement = document.querySelector(".card-image");
+let plotElement = document.querySelector("#plot");
+let genreElement = document.querySelector("#genre");
+let imdbRatingElement = document.querySelector("#imdb");
+let boxOfficeElement = document.querySelector("#box-office");
 
 display.style.visibility = "hidden";
 
@@ -41,15 +41,16 @@ searchBtn.addEventListener("click", function (event) {
         actors[i].textContent = one[i];
         movie.textContent = data.Title + " " + data.Year;
       }
-      cardImgElement.src = data.Poster
-      plotElement.textContent = data.Plot
-      genreElement.textContent = data.Genre
-      imdbRatingElement.textContent = "Imdb Rating - " + data.imdbRating
-      boxOfficeElement.textContent = "Box Office Revenue - " + data.BoxOffice
+      cardImgElement.src = data.Poster;
+      plotElement.textContent = data.Plot;
+      genreElement.textContent = data.Genre;
+      imdbRatingElement.textContent = "Imdb Rating - " + data.imdbRating;
+      boxOfficeElement.textContent = "Box Office Revenue - " + data.BoxOffice;
+      wikipediaApi();
     });
 
   //wikipedia
-  btn.addEventListener("click", function () {
+  function wikipediaApi() {
     fetch(
       "https://en.wikipedia.org/w/api.php?action=opensearch&search=" +
         movie.innerHTML +
@@ -63,7 +64,16 @@ searchBtn.addEventListener("click", function (event) {
       .then(function (data) {
         console.log(data);
         let filmArray = data[3][0];
+        if (filmArray === undefined) {
+          btn.style.visibility = "hidden";
+        }
         console.log(filmArray);
+        btn.addEventListener("click", function (event) {
+          let filmArray = data[3][0];
+          wikipediaApi();
+          event.preventDefault();
+          window.location = filmArray;
+        });
       });
-  });
+  }
 });
