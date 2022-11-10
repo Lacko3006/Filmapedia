@@ -10,7 +10,7 @@ let plotElement = document.querySelector("#plot");
 let genreElement = document.querySelector("#genre");
 let imdbRatingElement = document.querySelector("#imdb");
 let boxOfficeElement = document.querySelector("#box-office");
-let presentElement = document.querySelector(".present")
+let presentElement = document.querySelector(".present");
 
 display.style.visibility = "hidden";
 btn.style.visibility = "hidden";
@@ -44,15 +44,21 @@ searchBtn.addEventListener("click", function (event) {
         actors[i].textContent = one[i];
         movie.textContent = data.Title + " " + data.Year;
       }
-      cardImgElement.style.visibility = "visible"
+      cardImgElement.style.visibility = "visible";
       cardImgElement.src = data.Poster;
-      presentElement.style.visibility = "visible"
+      presentElement.style.visibility = "visible";
       plotElement.textContent = data.Plot;
       genreElement.textContent = data.Genre;
       imdbRatingElement.textContent = "Imdb Rating - " + data.imdbRating;
       boxOfficeElement.textContent = "Box Office Revenue - " + data.BoxOffice;
-      btn.style.visibility = "visible"
+      btn.style.visibility = "visible";
       wikipediaApi();
+      let filmName = searchInput.value;
+      let storeObj = {
+        filmName,
+      };
+      const stringObj = JSON.stringify(storeObj);
+      localStorage.setItem(filmName, stringObj);
     });
 
   //wikipedia
