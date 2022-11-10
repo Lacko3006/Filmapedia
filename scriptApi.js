@@ -5,13 +5,18 @@ let mainImg = document.querySelector("#hero");
 let searchInput = document.querySelector("#searchInput");
 let searchBtn = document.querySelector("#searchBtn");
 let btn = document.querySelector("#btn");
+let cardImgElement = document.querySelector(".card-image")
+let plotElement = document.querySelector("#plot")
+let genreElement = document.querySelector("#genre")
+let imdbRatingElement = document.querySelector("#imdb")
+let boxOfficeElement = document.querySelector("#box-office")
 
 display.style.visibility = "hidden";
 
 searchBtn.addEventListener("click", function (event) {
   event.preventDefault();
 
-  fetch("http://www.omdbapi.com/?t=" + searchInput.value + "&apikey=6aa91fd2")
+  fetch("https://www.omdbapi.com/?t=" + searchInput.value + "&apikey=6aa91fd2")
     .then(function (response) {
       console.log(response);
       console.log(response);
@@ -35,8 +40,12 @@ searchBtn.addEventListener("click", function (event) {
       for (let i = 0; i < one.length; i++) {
         actors[i].textContent = one[i];
         movie.textContent = data.Title + " " + data.Year;
-        // date.textContent = data.Released;
       }
+      cardImgElement.src = data.Poster
+      plotElement.textContent = data.Plot
+      genreElement.textContent = data.Genre
+      imdbRatingElement.textContent = "Imdb Rating - " + data.imdbRating
+      boxOfficeElement.textContent = "Box Office Revenue - " + data.BoxOffice
     });
 
   //wikipedia
