@@ -4,7 +4,7 @@
 }
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #000000;
+  background-color: grey;
   background-image: url("");
 }
 
@@ -15,13 +15,13 @@ body {
 
 #searchBtn {
   text-align: center;
-  color: red;
+  color: rgba(0, 255, 255, 0.742);
   width: 100%;
 }
 
 #searchBtn:hover {
-  color: red;
-  box-shadow: 5px 5px 5px 0px red;
+  color: rgb(6, 6, 6);
+  box-shadow: 5px 5px 5px 0px black;
   cursor: pointer;
   opacity: 0.8;
 }
@@ -67,3 +67,12 @@ body {
   text-align: center;
   font-size: 35px;
 }
+  
+p{
+    color: rgba(0, 255, 255, 0.811);
+  }
+   
+  #title{
+    color: rgba(0, 255, 255, 0.727);
+   }
+
