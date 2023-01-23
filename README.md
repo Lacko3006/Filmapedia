@@ -6,9 +6,9 @@ The web app demonstrates the ability to use a Javascript GET method to retrieve 
 Once the information about the film is displayed, the web app will have a button that takes the user to a wikipedia page using a second API.
 The website also demonstrates the usage of a CSS framework called bulma to utilize the styling of the web application 
 
-Deployed website: https://lacko3006.github.io/marvel-character-search/
+Deployed website: https://lacko3006.github.io/Filmapedia/
 
-Github repo: https://github.com/Lacko3006/marvel-character-search
+Github repo: https://github.com/Lacko3006/Filmapedia
 
 ## Usage
 
